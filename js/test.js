@@ -451,9 +451,7 @@ window.addEventListener("load", function() {
       }else{
         navBar[i].className="navBar navBarSelected"
         article[i].style.display="block";
-        if(i==2){
-          initMap();
-        };
+
       }
     }
 
@@ -487,60 +485,6 @@ window.addEventListener("load", function() {
   }
   /************ Hämta data END  *****************************************/
 
-
-
-  /***  Ändra användare eller lösenord i databas *******************************/
-  /*
-  let updateUserLib = function(){
-    http.onreadystatechange = function(){
-      if(this.readyState==4){
-        console.log(JSON.parse(http.response));
-        document.getElementsByClassName("userLib")[0].innerHTML="funkar: ";
-        document.getElementsByClassName("userLib")[0].innerHTML+=http.responseText;
-      }
-    }
-
-    let link = "https://www.forverkliga.se/JavaScript/api/crud.php?";
-    keyMaster = "key=Ln9a4"
-    let typ= "op=update";
-    id = "id=11006";
-    title="title=Erik";
-    author = "author=hVfr2"
-
-    console.log(link + keyMaster +"&"+ typ +"&"+ id +"&"+ title +"&"+ author);
-    http.open("GET",link + keyMaster +"&"+ typ +"&"+ id +"&"+ title +"&"+ author,true);
-    http.send();
-  }
-  /************************ Uppdatatera END *******************************/
-
-
-  /*******************  Lägg till i databas  ********************************/
-  /*
-  let addToUserLib = function (){
-    http.onreadystatechange = function(){
-      if(this.readyState==4){
-        document.getElementsByClassName("userLib")[0].innerHTML="funkar: ";
-        document.getElementsByClassName("userLib")[0].innerHTML+=http.responseText;
-        console.log(JSON.parse(http.response));
-      }
-    }
-
-    let link = "https://www.forverkliga.se/JavaScript/api/crud.php?";
-    let typ= "op=insert";
-    title="title=zyTCAlFPjgYC";
-    author="author=GoogleBooks";
-
-
-    console.log(link+key+"&"+typ+"&"+title+"&"+author);
-    http.open("GET", link+key+"&"+typ+"&"+title+"&"+author,true);
-
-    http.send();
-
-  }
-
-  */
-
-  /********************   Lägg till END   *************************************/
 
 
   /*******************  Logga Ut Användare ***********************************/
@@ -950,10 +894,6 @@ window.addEventListener("load", function() {
 
 
 
-  //let johan = new User("johan80","admin","johan","Augustsson","zingo80@msn.com","fe7Hz");
-  //console.log(johan);
-  //let johanStr = (JSON.stringify(johan));
-
 
   // **  Funktioner som körs när man kommer till sidan ************************//
   //saveNewUser(johanStr);
@@ -1033,16 +973,7 @@ window.addEventListener("load", function() {
     book.Id= x.id;
     book.imgSrc = "http://books.google.com/books/content?id=7zsJAAAAQAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api";
 
-    /*
-    if(x.volumeInfo.imageLinks.smallThumbnail!=undefined)
-    book.imgSrc = x.volumeInfo.imageLinks.smallThumbnail;
 
-    if(x.hasOwnProperty("searchInfo")){
-      if(x.searchInfo.hasOwnProperty("textSnippet")){
-        book.searchSnippet = x.searchInfo.textSnippet;
-      }
-    };
-    */
     let list = document.createElement("li",{id:"books"});
     let img = document.createElement("img");
     let button  = document.createElement("button");

@@ -1,13 +1,10 @@
-#text {
-    margin-top: 30px;
-    
-}
+
 
 #text1 {
     margin-top: 100px;
     text-align: center;
     position: relative;
-    margin-left: 400px;
+    float:right;
 }
 
 
@@ -63,28 +60,15 @@ body>.container{
     color: white;
 }
 
-
-
-
-
-/*
-header{
-  grid-column: 1/13;
-  grid-row: 1/1;
-  background-color: rgba(195, 193, 191, 0.7);
-  border: 1px rgb(135, 135, 135) solid;
+.container-flex .about{
+  max-width: 80%;
+  margin: auto;
+  background-color: rgba(231, 235, 233,0.8);
   border-radius: 10px;
-
+  padding: 5px;
 }
 
-.header-right{
-  margin: 10px 10px;
-  min-width: 150px;
-  grid-column: 13/13;
-  display: block;
-  opacity: 1;
-}
-*/
+
 nav{
   margin: 0px 0px;
   z-index: 100;
