@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Remove Book</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/stylesremoveBook.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device=width">
+      <script type="text/javascript">
+      
+      window.addEventListener("load", taBort )
+        
+        function taBort() {
+      
+        let knapp = document.getElementById("btn");  
+            
+        knapp.addEventListener("click", 
+                function() {
+  
+                let req = new XMLHttpRequest();    
+        
+         let typ = "op=" + "delete";
+         let author = "author=" + "test";
+         let title = "title=" + "title";
+         let id = "id=" + taBort;
+         let key = "key=" + "hVfr2"
+        
+         req.open("GET", "https://www.forverkliga.se/JavaScript/api/crud.php?" + typ+ "&" + id+ "&" + key);
+        
+        req.send();
+        
+        req.onreadystatechange = function(event) {
+            console.log("readyState:" + req.readyState);
+            console.log("status:" + req.status);
+                    console.log("responseText:" + req.responseText);
+                    
+                    if( req.readyState == 4 ) {
+                        
+                        console.log(req.response);
+                        
+                    }
+            };
+        }) 
+    
+          
+    
+    };
+    
+    
+    </script>
+</head>
+<body>
+    
+    <button id="btn">Click to add</button>
+       
+</body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+</html>

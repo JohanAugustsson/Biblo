@@ -1,0 +1,7 @@
+
+kvar att fixa: 
+
+- utöka sök kriterierna, välja antal träffa samt visa antal träffar totalt.
+- när man scrollar ner skall nästa söksida med träffar visas.
+
+ 

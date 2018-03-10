@@ -1,0 +1,657 @@
+#text {
+    margin-top: 30px;
+    
+}
+
+#text1 {
+    margin-top: 100px;
+    text-align: center;
+    position: relative;
+    margin-left: 400px;
+}
+
+
+*{
+  padding:0;
+  margin: 0;
+  font-family: Average,Didot, sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("../img/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body>.container{
+  margin: 3% 5%;
+}
+
+.container{
+  margin: 0px 0px;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12,1fr);
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 10px;
+  border-radius: 10px;
+}
+
+.container-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+}
+
+.contact {
+    text-align: left;
+}
+
+
+
+
+.info p {
+    margin-top: 10px;
+    color: white;
+    text-align: left;
+}
+
+.info h3 {
+    color: white;
+}
+
+
+
+
+
+/*
+header{
+  grid-column: 1/13;
+  grid-row: 1/1;
+  background-color: rgba(195, 193, 191, 0.7);
+  border: 1px rgb(135, 135, 135) solid;
+  border-radius: 10px;
+
+}
+
+.header-right{
+  margin: 10px 10px;
+  min-width: 150px;
+  grid-column: 13/13;
+  display: block;
+  opacity: 1;
+}
+*/
+nav{
+  margin: 0px 0px;
+  z-index: 100;
+  background-color: rgb(54, 52, 51);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.navBar{
+  display: block;
+  width: 100%;
+  height: 80px;
+  padding: 20px ;
+  text-align: center;
+  background-color: rgb(60, 59, 59);
+  color: white;
+
+}
+.navBarSelected{
+  border: 0px;
+  box-shadow: none;
+  color: rgba(69, 29, 0, 0.8);
+  color: gold;
+}
+.navBar:hover{
+  background-color: rgb(175, 175, 175);
+  cursor: pointer;
+
+}
+.navBar:nth-child(1){
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+aside{
+  grid-column: 1/2;
+  grid-row: 1/11;
+  background-color: rgb(60, 59, 59);
+  border: 1px rgb(135, 135, 135) solid;
+  border-radius: 10px;
+}
+article{
+  padding-top: 70px;
+  grid-column: 2/13;
+  grid-row: 1/11;
+  background-color: rgba(213, 213, 213, 0.88);
+  border: 1px rgb(135, 135, 135) solid;
+  border-radius: 10px;
+  opacity: 0.9;
+
+
+}
+
+.article{
+  display: none;
+}
+
+
+
+.Us {
+    margin-top: 30px;
+}
+
+#map {
+        height: 700px;
+        width: 700px;
+        opacity: 1;
+        margin-top: 30px;
+
+}
+
+footer{
+  grid-column: 1/13;
+  grid-rows:11/11;
+  background-color: rgb(54, 52, 51);
+  border: 1px rgb(135, 135, 135) solid;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.userOnNavBar{
+  background-color: rgb(60, 59, 59);
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+}
+#loggOut{
+  margin-top: 30px;
+  background-color: rgb(224, 48, 178);
+  padding: 5px;
+  display: none;
+  border-radius: 5px;
+  margin: 10px auto;
+
+}
+#loggOut:hover{
+  background-color: rgb(209, 209, 209);
+}
+
+.books{
+  width: 95%;
+  font-size: 1em;
+  height: 95%;
+  padding: 10px;
+  padding-top: 40px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.books:hover{
+  overflow: auto;
+
+}
+.books a{
+  width: 100%;
+  text-decoration: none;
+  position: absolute;
+  background-color: rgba(231, 235, 233,0.8);
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+  color: black;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+.books ul{
+  list-style-type: none;
+}
+.books li img{
+  width: 220px;
+  max-height: 2250px;
+  min-height: 280px;
+  display: absolute;
+}
+.books input{
+  padding: 5px;
+  border-radius: 5px;
+  margin: 15px auto;
+  display: block;
+}
+#btnMakeOwnBook{
+  display:block;
+  width: 85%;
+  padding: 5px;
+  background-color: rgb(174, 250, 109);
+  border-radius: 10px;
+  margin: 30px auto;
+
+}
+.container-flex li{
+  box-sizing: border-box;
+  margin: 20px;
+  width: 280px;
+  height: 500px;
+  max-height: 500px;
+  min-width: 280px;
+  background-color: rgba(251, 255, 254, 0.25);
+  display: inline-block;
+  position: relative;
+  border-radius: 5px;
+  font-family: Arya, sans-serif;
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+.container-flex li *::-webkit-scrollbar {
+  display: none;
+}
+.container-flex li:hover{
+  box-shadow: 10px 10px 10px rgb(119, 77, 7);
+  transition: all 200ms ease-in;
+ transform: scale(1.05);
+}
+
+
+
+.knappTabort{
+  background-color: #ba0636;
+  color:#fafafa;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  font-size: 1em;
+  font-weight: 600;
+  position: absolute;
+  top: 460px;
+  right: 5px;
+}
+.knappTabort:after{
+  content:"x";
+  padding:2px;
+}
+.knappTabort:focus{
+  outline:none;
+}
+
+
+.btnAddToShell{
+  background-color: #555555;
+  color:#fafafa;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  font-size: 1em;
+  font-weight: 600;
+  position: absolute;
+  top: 460px;
+  right: 5px;
+}
+.btnAddToShell:after{
+  content:"+";
+  padding:2px;
+}
+.btnAddToShell:focus{
+  outline:none;
+}
+btnAddToShell:active{
+  color:gold;
+}
+.searchParameters{
+  margin:0 0;
+  flex: 1 1 100%;
+  height: 80px;
+  overflow: hidden;
+  background-color: rgba(209, 209, 209, 0.42);
+}
+
+
+.searchParameters div{
+  padding: 5px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+.searchParameters>div>*{
+  padding: 10px;
+  margin: 10px;
+  font-size: 1em;
+}
+.searchParameters input{
+  border-radius: 7px;
+}
+.searchParameters input:focus{
+ outline: none;
+ box-shadow: 0 0 8px #508cdb;
+}
+
+.searchParameters span{
+  color: #555555;
+}
+.searchParameters span:hover{
+  color: rgba(209, 209, 209, 0.42);
+
+}
+
+.advancedSearch input{
+  width: 50px;
+}
+#btnSearchGoogle{
+  border-radius: 10px;
+  padding:6px 15px;
+  background-color:#555555;
+  color:#fafafa;
+}
+#btnSearchGoogle:focus{
+  outline:none;
+}
+#btnSearchGoogle:hover{
+  background-color: #a1a1a1;
+
+}
+#btnSearchGoogle:active{
+
+  color: gold;
+}
+
+
+/********** login page *********************/
+
+.pop-up-Show:target{
+  opacity: 1;
+  pointer-events: auto;
+
+}
+.pop-up-Show:target .pop-up-loginMenu{
+    animation: drop 1s ease forwards;
+}
+
+.pop-up-Show{
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left: 0;
+  opacity: 0;
+  z-index: 1000;
+	transition: opacity 700ms ease-in;
+  pointer-events: none;
+  background-color: rgba(43, 43, 43, 0.74);
+
+}
+
+.pop-up-loginMenu{
+  position: relative;
+  background-color: rgb(120, 120,120);
+  top: -400px;
+  width: 30%;
+  min-width: 500px;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 300px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.pop-up-loginMenu *{
+  display: inline-block;
+
+}
+.pop-up-loginMenu label{
+  display: block;
+  line-height: 20px;
+  width: 25%;
+  text-align: right;
+
+}
+.pop-up-loginMenu input{
+  display: inline-block;
+  position: absolute;
+  margin-left: 10px;
+  width: 150px;
+  border-radius: 10px;
+
+  padding-left: 5px;
+}
+.pop-up-loginMenu input:focus{
+  content:"<-";
+}
+
+.pop-up-loginMenu p{
+  display: inline-block;
+  position: relative;
+  top: 40px;
+  left: 0px;
+  width: 80%;
+}
+.pop-up-loginMenu a{
+  position: absolute;
+  right: 10px;
+
+}
+.pop-up-loginMenu>a>button{
+  width: 30px;
+  padding: 5px;
+  border-radius: 50px;
+  text-decoration: none;
+  background-color: rgb(175, 173, 173);
+  font-weight: 600;
+  color:white;
+
+
+}
+.pop-up-loginMenu > span{
+  top: 50px;
+  left:60%;
+  width: 200px;
+  height: 150px;
+  position: absolute;
+
+
+}
+.pop-up-loginMenu span button{
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(92, 92, 92);
+  margin:5px;
+  color: white;
+}
+.pop-up-loginMenu span button:hover{
+  background-color: rgb(128, 128, 128);
+}
+
+.pop-up-Text{
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 90%;
+  height: 40px;
+  color:White;
+  font-size: 1.2em;
+}
+
+.pop-up-loginMenu >a>button:hover{
+  background-color: rgb(249, 93, 93);
+  color:rgb(201, 201, 201);
+}
+
+@keyframes drop{
+  0%{opacity: 0.2}
+  70%{transform: translateY(700px)}
+  100%{transform: translateY(650px)}
+}
+/************* Login page END *******************/
+
+
+
+
+/******* userSettings *************************/
+
+.userSettings{
+  text-align: right;
+  min-width: 350px;
+  max-width: 350px;
+  padding: 10px;
+  margin: 0 auto;
+}
+.userSettings >label{
+  display:block;
+  margin: 10px;
+}
+.userSettings > label >input{
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.userSettings button{
+  padding: 10px;
+  background-color: rgb(139, 139, 139);
+
+}
+
+#settingId,#settingUserKey,#settingUpdated,#settingUserName{
+  background-color: rgb(204, 204, 204);
+}
+#userKey{
+  background-color: rgb(171, 171, 171);
+}
+
+@media screen and (max-width: 600px){
+  .pop-up-loginMenu{
+    top: -600px;
+    height: auto;
+    display: block;
+    width: 95%;
+    min-width: 0px;
+  }
+  .pop-up-loginMenu p {
+    height: auto;
+    left: 0px;
+    right: 0px;
+    margin: 5px auto;
+    width: 100%;
+  }
+  .pop-up-loginMenu input,  .pop-up-loginMenu label{
+    display: block;
+    width: 95%;
+    text-align: left;
+    left: 0px;
+    right: 0px;
+    margin: 5px auto;
+
+  }
+  .pop-up-loginMenu > span{
+    position: relative;
+    display: block;
+    left:0;
+    right: 0;
+    margin: 0px auto;
+
+    top: 10px;
+  }
+  .pop-up-loginMenu >span >button{
+    width: 120px;
+    height: 50px;
+
+  }
+
+  .container-flex li{
+    width: 95%;
+    margin: 10px 0px;
+    min-width: 0px;
+  }
+  .container-flex li *{
+    min-width: 0px;
+  }
+
+  nav ul{
+    width: 100%;
+    min-width: 0px;
+  }
+  nav ul .navBar{
+    display: block;
+    width: 100%;
+  }
+  .searchParameters>div>*{
+    margin: 10px 1px;
+    width: 98%;
+
+  }
+  .userSettings > label >input{
+    margin-left: 0px;
+    border-radius: 5px;
+    display: block;
+    width: 95%;
+  }
+  .userSettings{
+    text-align: right;
+    width: 100%;
+    padding: 0px;
+    margin: 0 0;
+    max-width: 100%;
+    min-width: 0%;
+  }
+  .userSettings >label{
+    display:block;
+    margin: 10px 0px;
+    text-align: left;
+    width: 100%;
+  }
+  .userSettings >button{
+    display:block;
+    width: 100%;
+
+  }
+}
+
+@media screen and (max-width: 1200px){
+  body>.container{
+    margin: 1% 1%;
+  }
+}
+
+@media screen and (max-width: 900px){
+  aside{
+    grid-column: 1/13;
+    grid-row: 1/1;
+
+  }
+  article{
+    grid-column: 1/13;
+    grid-row: 2/13;
+  }
+  .navBar{
+    display:inline-block;
+    width: auto;
+    height: auto;
+
+  }
+  .navBar li{
+    display:inline-block;
+    width: auto;
+    margin: 0px auto;
+  }
+  .userOnNavBar{
+    margin: 0 auto;
+    padding: 5px;
+
+  }
+  nav ul{
+    display: inline-block;
+  }
+  .userOnNavbar div{
+    display: inline-block;
+  }
+  #loggOut{
+    margin: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+  }
+  .searchParameters{
+    height: auto;
+  }
+}

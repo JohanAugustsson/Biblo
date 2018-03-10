@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <script src="./js/test.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arya" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/animation.css">
+
+</head>
+<body>
+
+  <div id="pop-up" class="pop-up-Show">
+    <div class="pop-up-loginMenu">
+
+        <a href="#close"><button type="button">X</button></a>
+        <p>
+          <label>Användar ID<input id="userName" type="text"></label><br>
+          <label>Lösenord<input id="userPassword" type="password" name="" value=""></label><br>
+          <label>Förnamn<input id="firstName" type="text" name="" value=""></label><br>
+          <label>Efternamn<input id="lastName" type="text" name="" value=""></label><br>
+          <label>Mejl<input id="userEmail" type="text" name="" value=""></label><br>
+          <label>Key<input id="userKey" type="text" name="" value="" readonly="readonly"></label>
+          <span class="pop-up-Text"></span>
+        </p>
+
+        <span>
+          <button id="btnLoggIn"type="button" name="button">Logga in</button>
+          <button id="btnNewUser" type="button" name="button">Ny Användare</button>
+        </span>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <!--
+    <header>
+      <div class="container">
+        <div class="header-right">
+
+        </div>
+      </div>
+    </header>
+  -->
+
+    <aside>
+      <nav>
+        <ul>
+          <li class="navBar navBarSelected"><i class="fa fa-home fa-3x faa-wrench animated-hover" aria-hidden="true"></i></li>
+          <li class="navBar">About</li>
+          <li class="navBar">Contact</li>
+          <li class="navBar">User Libarary</li>
+          <li class="navBar">User settings</li>
+        </ul>
+        <div class="userOnNavBar">
+          <div>
+            <a href="#pop-up"><i class="fa fa-user-circle fa-2x" style="color:rgb(142, 0, 0)" aria-hidden="true"></i></a>
+            <span id="headUserInfo">Ej inloggad</span>
+            <!--<ul id="profileMenu">
+              <li id="loggOut">Logga ut</li>
+            </ul> -->
+            <button id="loggOut" type="button" name="button">Logga ut</button>
+
+          </div>
+        </div>
+      </nav>
+    </aside>
+    <footer>
+      <div class="report" style="color:white">
+        <p><strong>Statestik</strong><br>Misslyckade requests: <span id="failCounter">0</span></p>
+      </div>
+
+      </footer>
+
+
+    <article class="article">
+
+      <div class="container-flex">
+
+        <div class="searchParameters">
+          <div>
+            <input id="searchTitelTextInput" type="text" placeholder="Titel eller ID">
+            <input id="searchAutorTextInput" type="text" placeholder="Författare">
+            <button id="btnSearchGoogle" type="button" name="button">Sök</button>
+
+          </div>
+
+        </div>
+        <div>
+
+          <ul id="resultSearchBooks">
+          </ul>
+
+
+
+        </div>
+        </div>
+    </article>
+
+
+    <article class="article">
+      <div class="container-flex">
+        <h2>Om detta bibliotek:</h2>
+          </br><p id="text"><b>Detta är vårat "imdb" för böcker som vi har gjort i samband med javascript2 kursen. Vi har byggt en sida med loginfunktion där användaren har ett eget personligt bibliotek med böcker som enbart den inloggade kan se samt lägga till och ta bort dem ut sitt bibliotek. Böckerna som användaren kan välja från är tagna från Googlebooks api som vi använt oss av. Vi har även en sök funktion där man kan söka på författare eller titel på boken, och man får fram en lista på 10 sökträffar från Googlebooks.</b></p>
+        <p id="text1"><b>Johan Augustsson och Erik Ojeda Johansson, EC Utbildning Göteborg 2017</b></p>
+      </div>
+    </article>
+
+
+
+    <article class="article">
+      <div class="container-flex">
+          <h3>Find Us Here:</h3>
+          <div id="map"></div>
+         <script>
+            function initMap() {
+                var uluru = {lat: 57.6834228, lng: 12.000160999999935};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: uluru
+                });
+                var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+                });
+            }
+        </script>
+
+            <br><p class="Us"<b>Email: <a href="info@ourlibrary.com">Our Library</a>
+            </br>Visit us at:
+            </br>Ourlibrary.com
+            </br>EC Utbildning, Mölndalsvägen 81
+            </br>412 63 Götborg</b></p>
+
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrZbY0e4a0bMbZTCcjQuT5Xo1eJOK4c74">
+
+    </script>
+
+
+
+        </div>
+    </article>
+
+
+    <article class="article userLib">
+        <div class="container-flex">
+            <ul id="listBooks">
+
+            </ul>
+        </div>
+        <div class="container-flex">
+            <ul>
+              <li class="books">
+                <label><input id="myBookTitle" type="text" placeholder="Titel"></label>
+                <label><input id="myBookAuthor" type="text" placeholder="Författare"></label>
+                <button id="btnMakeOwnBook" type="button" name="button">Lägg till Bok</button>
+
+                <!--
+                <label><input id="myBookid" type="text" placeholder="myBookid"></label>
+                <label><input id="myBookLink" type="text" placeholder="myBookLink"></label>
+                <label><input id="myBoookDescription" type="text" placeholder="myBoookDescription"></label>
+                <label><input id="myBookSearchSnippet" type="text" placeholder="myBookSearchSnippet"></label>
+                <label><input id="myBookImgSrc" type="text" placeholder="myBookImgSrc"></label>
+                <label><input id="myBookServer" type="text" placeholder="myBookServer"></label>
+              -->
+
+
+              </li>
+            </ul>
+        </div>
+
+        <!--<button id="btnTest" type="button" name="button">Testknapp för utv</button>
+        <button id="btnTest2" type="button" name="button">Testknapp för utv2</button> -->
+    </article>
+    <article class="article">
+      <div class="container-none">
+        <div class="userSettings">
+          <label>Användar Id<input id="settingUserName" type="text" readonly="readonly"></label>
+          <label>Lösenord<input id="settingUserPassword" type="password" name="" value=""></label>
+          <label>Förnamn<input id="settingFirstName" type="text" name="" value=""></label>
+          <label>Efternamn<input id="settingLastName" type="text" name="" value=""></label>
+          <label>Mejl<input id="settingUserEmail" type="text" name="" value=""></label><br>
+          <label>ID nummer<input id="settingId" type="text" name="" value="" readonly="readonly"></label>
+          <label>Key<input id="settingUserKey" type="text" name="" value="" readonly="readonly"></label>
+          <label>Time<input id="settingUpdated" type="text" name="" value="" readonly="readonly"></label>
+
+          <button id="btnsettingUpdated" type="button" name="button">Uppdatera!</button>
+        </div>
+
+
+      </div>
+    </article>
+
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lab 4 INDEX</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles4.css"> 
+    <script src="./js/functions.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+      <script type="text/javascript">
+      
+      window.addEventListener("load", searchBooks,)
+        
+        function searchBooks() {
+            var input, filter, td, tr, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("menu");
+            tr = table.getElementsByTagName("tr");
+            
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    if (td.innerHTML.toUpperCase().indexOf(filter) > - 1) { tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+            }
+        }; 
+          
+        window.addEventListener("load", addToLib)
+    
+        function addToLib() {
+        
+        let knapp = document.getElementById("btn4");
+          
+          knapp.addEventListener("click", 
+                    function(addBook) {
+              //console.log(addBook);
+                var ul = document.getElementById("listBooks");
+                var makeBook = document.createElement("li");
+                makeBook.innerHTML = "title"
+                ul.appendChild(makeBook);
+
+          });
+        };
+          
+      
+        
+          
+          
+          
+        
+              
+         
+          
+    
+    
+    
+    
+    </script>
+</head>
+<body>
+    
+    <h1>Lab 4 Book Library</h1>
+    
+    <h2>Search Books:</h2>
+        Find Books:<input type="text" id="myInput" onkeyup="searchBooks()" placeholder="Search for Author or Title..." title="type in title of book">
+    
+    
+    <h4>Our Books:</h4>
+    <table id="menu" class="listan">
+        
+        <tr>
+            <td>
+                <div id="book1">
+                <p><a  href="https://books.google.se/books/about/Harry_Potter_and_the_Sorcerer_s_Stone.html?hl=&id=wrOQLV6xB-wC&redir_esc=y">Harry Potter And The Sorceres Stone, Rowling J.K</a></p>
+                </div>
+                    <div>
+                        <img src="https://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=5&source=gbs_api">
+                    </div>
+                <div>
+                    <button id="btn1" class="addTolibrary">Click to add to Library</button>
+                    </div>
+                <div>
+                    </br><button id="btn11" class="removeFromlibrary">Click to Remove from Library</button></div>
+                </td>
+            </tr>
+        <tr>
+            <td>
+                <div id="book2">
+                <p><a  href="https://books.google.se/books/about/Harry_Potter_and_the_Goblet_of_Fire.html?id=etukl7GfrxQC&redir_esc=y">Harry Potter And The Goblet of Fire,Rowling J.K</a></p>
+                </div>
+                <div>
+                <img src="http://books.google.com/books/content?id=etukl7GfrxQC&printsec=frontcover&img=1&zoom=5&source=gbs_api">
+                </div>
+                <div><button id="btn2" class="addTolibrary">Click to add to Library</button></div>
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <div id="book3">
+                    <p><a  href="https://books.google.se/books/about/The_Lord_of_the_Rings.html?hl=&id=yl4dILkcqm4C&redir_esc=y">The Lord Of The Rings, Tolkien J.R.R</a></p>
+                </div>
+                    <div>
+                        <img src="http://books.google.com/books/content?id=yl4dILkcqm4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api">
+                </div>
+                    <div><button id="btn3" class="addTolibrary">Click to add to Library</button>
+                </div>
+            </td>
+        </tr> 
+        <tr>
+            <td>
+                <div id="book4">
+                <p><a  href="https://books.google.se/books?id=gP_bCwAAQBAJ&dq=lovecraft&hl=&source=gbs_api">Tales In The Chutulu Mythos,H.P. Lovecraft</a></p>
+                </div>
+            <div>
+                <img src="http://books.google.com/books/content?id=gP_bCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api">
+            </div>
+                <div><button type="button" id="btn4"  class="addTolibrary">Click to add to Library</button></div>
+            </td>
+        </tr>
+    </table>          
+             
+    
+   <p class="dina">Your Books: </p>
+        <div>
+            <ul id="listBooks">
+                
+                
+            </ul>
+        </div>
+       
+
+    
+
+
+    <p class="paragraf"> Erik Ojeda Johansson & Johan Augustsson, EC Utbildning Göteborg 2017</p>
+        
+</body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+</html>

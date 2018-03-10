@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Api Google</title>
+      <link rel="stylesheet" type="text/css" href="../CSS/stylesaddBook.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+        <script type="text/javascript">
+
+        window.addEventListener("load", nameFunction );
+
+          function nameFunction() {
+            let knapp = document.getElementById("btn");
+            let req = new XMLHttpRequest();
+            let typ = "op=" + "insert";
+            let author = "author=" + "test";
+            let title = "title=" + "title";
+            let id = "id=" + "11729";
+            let key = "key=" + "hVfr2"
+
+            knapp.addEventListener("click",function(){
+              req.onreadystatechange = function(event) {
+                /*console.log("readyState:" + req.readyState);
+                console.log("status:" + req.status);
+                console.log("responseText:" + req.responseText);*/
+              if( req.readyState == 4 ) {
+                console.log(req.response);
+              }
+            }
+            req.open("GET", "https://www.forverkliga.se/JavaScript/api/crud.php?" + typ+ "&"+ author+ "&"+ title+"&" + key);
+            req.send();
+          });
+        };
+      </script>
+  </head>
+<body>
+
+    <button id="btn">Click to add</button>
+
+</body>
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> sandbox

@@ -1,0 +1,38 @@
+body {
+    background-color: sienna;
+}
+
+.listan, table, tr, td {
+    margin-top: 20px;
+}
+
+.dina {
+    margin-top: 30px;
+}
+
+.view {
+    width: 400px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.bort {
+    width: 400px;
+    height: 60px;
+    margin-top: 10px;
+    
+}
+
+.paragraf {
+    margin-top: 100px;
+    color: white;
+    font-size: small;
+}
+
+#btn1, #btn2, #btn3, #btn4 {
+    margin-top: 10px;
+}
+
+
+
+
